@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#0ea5e9',      // sky-500
+              'secondary': '#10b981',    // emerald-500
+              'accent': '#f97316',       // orange-500
+              'background': '#f1f5f9',   // slate-100
+              'card': '#ffffff',
+              'text-primary': '#1e293b',  // slate-800
+              'text-secondary': '#64748b', // slate-500
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Hide spin buttons on number inputs */
+      input[type=number].no-spinner::-webkit-inner-spin-button,
+      input[type=number].no-spinner::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number].no-spinner {
+        -moz-appearance: textfield; /* Firefox */
+      }
+    </style>
+    <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
